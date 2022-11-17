@@ -22,7 +22,7 @@ else()
     message(FATAL_ERROR "Cannot detect your system")
 endif()
 
-add_library(nativefiledialog ${SOURCES})
+add_library(nativefiledialog STATIC ${SOURCES})
 target_include_directories(nativefiledialog PUBLIC src/include)
 target_compile_definitions(nativefiledialog PUBLIC ${PREPROCESSOR_DEFINITIONS})
 
